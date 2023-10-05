@@ -3,14 +3,14 @@
   padding: 0;
 }
 
-html, body{font-size: 47px;
-           background-color:bisque;
+html, body{font-size: 27px;
+           background-color:rgba(19, 101, 159, 0.462);
           }
 
 
 h1
 {
-  max-width: 940px;
+  max-width: 1200px;
   font-size: 2.5em;
   font-family: lato, sans-serif;
   font-weight: 700;
