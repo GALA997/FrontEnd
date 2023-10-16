@@ -8,7 +8,11 @@ function App() {
             src={freeCodeCampLogo} 
             className='freecodecamp-logo'
             />
-      </div>   
+      </div>
+        <div className='tareas-lista-principal'>
+            <h1>Mis Tareas</h1>
+        </div>
+
     </div>
   );
 }
