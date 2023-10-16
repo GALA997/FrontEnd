@@ -13,6 +13,24 @@
     cursor: pointer;
 }
 
+/*Colors*/
+
+.tarea-contenedor:nth-child(3n + 1)
+{
+  background-color: #1b1b32 ;
+}
+
+.tarea-contenedor:nth-child(3n + 2)
+{
+  background-color: #2a2a40;
+}
+
+.tarea-contenedor:nth-child(3n + 3)
+{
+  background-color: #3b3b4f;
+}
+
+
 /*Text*/
 .tarea-texto
 {
@@ -30,4 +48,12 @@
   width: 25px;
   height: 25px;
   margin: 5px;
+}
+
+/*Completed Task*/
+.tarea-contenedor.completada
+{
+  background-color: #5a01a7;
+  text-decoration: line-through;
+  
 }
