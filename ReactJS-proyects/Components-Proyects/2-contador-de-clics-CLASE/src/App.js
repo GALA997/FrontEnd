@@ -1,9 +1,63 @@
+import React from 'react';
 import './App.css';
 import freeCodeCampoLogo from './images/freecodecamp-logo.png';
 import Boton from './components/boton'
 import Contador from './components/contador';
-import {useState} from 'react';
 
+  class App extends React.Component
+  {
+    constructor()
+    {
+      super();
+      this.state = {
+        numClics: 0
+      };
+      this.manejarClic = this.manejarClic.bind(this);
+      this.reiniciarContador =this.reiniciarContador.bind(this);
+    }
+
+    manejarClic()
+    {
+      this.setState(({numClics}) => ({numClics: numClics + 1}));
+    }
+
+    reiniciarContador()
+    {
+      this.setState({numClics: 0});
+    }
+
+      render()
+      {
+        return (
+          <div className="App">
+              <div className ='freecodecamp-logo-contenedor'>
+              <img 
+              className = 'freecodecamp-logo'
+              src ={freeCodeCampoLogo}
+              alt = 'logo de freecodecamp'
+              />
+          </div>
+              <div className = 'contenedor-principal'>
+              <Contador
+                numClics={this.state.numClics}
+              />
+              <Boton 
+                texto = 'Clic'
+                esBotonDeClic = {true}
+                manejarClic = {this.manejarClic}
+              />
+              <Boton 
+                texto = 'Reiniciar'
+                esBotonDeClic = {false}
+                manejarClic = {this.reiniciarContador}
+              />
+      
+              </div>
+          </div>
+        );
+      }
+  }
+/*
 function App() {
 
   const [numClics, setNumClics] = useState (0);
@@ -44,5 +98,5 @@ function App() {
     </div>
   );
 }
-
+*/
 export default App;
